@@ -1,0 +1,49 @@
+<%= render 'books/error', book:@book %>
+      	<div class="row">
+  <div class="col-xs-3">
+    <h2>User info</h2>
+    <img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg" alt="No image">
+    <table class="table">
+      <tbody><tr></tr> 
+      <tr>
+    	  <th>name</th>
+    	  <th>sena</th>
+      </tr>
+      <tr>
+    	  <th>introduction</th>
+    	  <th></th>
+      </tr>
+</tbody>
+</table>
+
+<div class="row">
+  <a class="col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_16704" href="/users/16704/edit"></a>
+</div>
+
+<%= render 'books/list', book:@book %>
+</div>
+
+  <div class="col-xs-9">
+		<h2>Book detail</h2>
+		<table class="table">
+		  <tbody>
+		  	<tr>
+        <td>
+        	<%= link_to "ユーザー", "#"%>
+          <img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg" alt="No image icon"><br>
+          <%= "ユーザー名" %>
+      </td>
+        <td>
+        	<%= link_to @book.title, book_path(@book.id) %>
+        </td>
+        <td><%= @book.body %></td>
+        <td>
+        	<%= link_to 'Edit', edit_book_path(@book.id), class:"btn-sm btn-success" %>
+        </td>
+        <td><%= link_to 'destroy', book_path(@book.id), method: :delete, data: {confirm: "Are you sure?"}, class:"btn-sm btn-danger"%></td>
+
+      </tr>
+    </tbody></table>
+
+  </div>
+</div>
