@@ -29,18 +29,18 @@
 		  <tbody>
 		  	<tr>
         <td>
-        	<%= link_to "ユーザー", "#"%>
+        	<%= link_to @books.user.name, "#"%>
           <img class="attachment user profile_image fallback" src="/assets/no-image-icon-d3f9e11cb2bb284b42e0810f94b03c50126f51f482ea43054b87c2b7ebaa01d5.jpg" alt="No image icon"><br>
-          <%= "ユーザー名" %>
+          <%= @books.user.name %>
       </td>
         <td>
-        	<%= link_to @book.title, book_path(@book.id) %>
+        	<%= link_to @books.title, book_path(@books.id) %>
         </td>
-        <td><%= @book.body %></td>
+        <td><%= @books.body %></td>
         <td>
-        	<%= link_to 'Edit', edit_book_path(@book.id), class:"btn-sm btn-success" %>
+        	<%= link_to 'Edit', edit_book_path(@books.id), class:"btn-sm btn-success" %>
         </td>
-        <td><%= link_to 'destroy', book_path(@book.id), method: :delete, data: {confirm: "Are you sure?"}, class:"btn-sm btn-danger"%></td>
+        <td><%= link_to 'destroy', book_path(@books.id), method: :delete, data: {confirm: "Are you sure?"}, class:"btn-sm btn-danger"%></td>
 
       </tr>
     </tbody></table>

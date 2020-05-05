@@ -1,18 +1,7 @@
 <%= render 'books/error', book:@book %>
 <div class="row">
   <div class="col-xs-3">
-    <h2>User info</h2>
-    <img class="attachment user profile_image" src="/attachments/4925fd3a4a951b7c66c8e8d87d4b7931e7ec44c5/store/fill/100/100/5458ca6af8a047474a5ddf9361728bad6c830ddc47de2d71bca9d6b1b4e9/profile_image" alt="Profile image"><table class="table">
-      <tbody><tr></tr> 
-      <tr>
-    	  <th>name</th>
-    	  <th>11</th>
-      </tr>
-      <tr>
-    	  <th>introduction</th>
-    	  <th></th>
-      </tr>
-</tbody></table>
+    <%= render 'users/user', user:@user %>
 
 <div class="row">
   <a class="col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_16704" href="/users/16704/edit"></a>
