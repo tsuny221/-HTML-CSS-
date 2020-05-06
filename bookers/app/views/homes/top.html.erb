@@ -6,6 +6,17 @@
           <p> about various books!</p>
 
     <div class="btn-wrapper">
+      <% if user_signed_in? %>
+            <div class="row">
+         <p>
+          <%= link_to "Log in", user_path(@user), class:"btn btn-info col-xs-10 col-xs-offset-1 sign_i" %>
+        </p>
+      </div>
+      <div class="row">
+        <p>
+          <%= link_to "Sign up", user_path(@user), class:"btn btn-success col-xs-10 col-xs-offset-1 sign_up" %>
+      </div>
+      <% else %>
       <div class="row">
          <p>
           <%= link_to "Log in", new_user_session_path, class:"btn btn-info col-xs-10 col-xs-offset-1 sign_i" %>
@@ -15,6 +26,7 @@
         <p>
           <%= link_to "Sign up", new_user_registration_path, class:"btn btn-success col-xs-10 col-xs-offset-1 sign_up" %>
       </div>
+       <% end %>
     </div>
   </div>
 </div>
