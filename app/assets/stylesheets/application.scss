@@ -1,0 +1,18 @@
+@import "bootstrap";
+/* ==========ここから追加する========== */
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import "common";
+
+
+/* ==========ここまで追加する========== */
+@import "top";
+@import "users/sign_up";
+@import "users/sign_in";
+@import "users/show";
+@import "users/edit";
+
+@import "jTinder";
+@import "matching";
+@import "chat";
