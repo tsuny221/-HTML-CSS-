@@ -1,0 +1,26 @@
+
+<%= render 'users/header', user:@user %>
+
+<main class="main">
+
+		<h2 class="txtm txtbold mobile_fixed_head">Users</h2>
+		<div class="mobile_head"></div>
+		<% @user.each do |user| %>
+			<div class="box users">
+				<%= link_to user_path(user), class:"user_icon" do %>
+					<div class="user_cont">
+							<%= attachment_image_tag user, :profile_image, :fill,1000,1000, fallback:"logo.png",  class:"user_img"%>
+						<div class="user_name black">
+							<p class="txts txtbold"><%= user.name %></p><p class="txts gray">@<%= user.id %></p>
+						</div>
+					</div>
+					<% end %>
+					<a href="" class="user_btn">
+						<div class="btns btnwhite">Follow</div>
+					</a>
+			</div>
+		<% end %>
+
+	</main>
+
+<%= render 'posts/aside', user:@user %>
