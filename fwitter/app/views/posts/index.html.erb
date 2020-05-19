@@ -6,7 +6,7 @@
 		<h2 class="txtm txtbold mobile_fixed_head">Home</h2>
 		<div class="mobile_head"></div>
 			<% @posts.each do |post| %>
-			<%= link_to post_path(post) do %>
+			<%= link_to post_path(post.id) do %>
 			<div class="box posts">
 					<div class="user_icon">
 						<%= attachment_image_tag post.user, :profile_image, :fill,1000,1000, fallback:"logo.png",  class:"user_img"%>
@@ -21,11 +21,11 @@
 								<%= fa_icon 'comment', class:"fa-fw" %><%= post.post_comments.count %>
 							</a>
 							<% if post.liked_by?(current_user) %>
-	    						<%= link_to post_likes_path(post), method: :delete, class:"txtxs gray likes" do %>
+	    						<%= link_to post_likes_path(post.id), method: :delete, class:"txtxs gray likes" do %>
 	    							<%= fa_icon 'heart', class:"fa-fw", style:"color: #f21d99;" %><%= post.likes.count %>
 	    						<% end %>
 							<% else %>
-	    						<%= link_to post_likes_path(post), method: :post, class:"txtxs gray likes" do %>
+	    						<%= link_to post_likes_path(post.id), method: :post, class:"txtxs gray likes" do %>
 	    							<%= fa_icon 'heart', class:"fa-fw" %><%= post.likes.count %>
 	    						<% end %>
 							<% end %>

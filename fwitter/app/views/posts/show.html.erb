@@ -21,17 +21,17 @@
 			<div class="box post_info">
 							<a href="" class="txtxs gray comments"><%= fa_icon 'comment', class:"fa-fw" %><%= @post.post_comments.count %></a>
 							<% if @post.liked_by?(current_user) %>
-	    						<%= link_to post_likes_path(@post), method: :delete, class:"txtxs gray likes" do %>
+	    						<%= link_to post_likes_path(@post.id), method: :delete, class:"txtxs gray likes" do %>
 	    						<%= fa_icon 'heart', class:"fa-fw", style:"color: #f21d99;" %><%= @post.likes.count %>
 	    						<% end %>
 							<% else %>
-	    						<%= link_to post_likes_path(@post), method: :post, class:"txtxs gray likes" do %>
+	    						<%= link_to post_likes_path(@post.id), method: :post, class:"txtxs gray likes" do %>
 	    						<%= fa_icon 'heart', class:"fa-fw" %><%= @post.likes.count %>
 	    						<% end %>
 						<% end %>
 							<% if @post.user == current_user %>
-							<%= link_to "編集", edit_post_path(@post), class:"txtxs gray destroy" %>
-							<%= link_to "削除", post_path(@post), method: :delete, class:"txtxs gray destroy" %>
+							<%= link_to "編集", edit_post_path(@post.id), class:"txtxs gray destroy" %>
+							<%= link_to "削除", post_path(@post.id), method: :delete, class:"txtxs gray destroy" %>
 							<% end %>
 			</div>
 			<div class="box space txts txtbold pink pink_bg">comments</div>

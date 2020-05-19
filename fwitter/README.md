@@ -1,24 +1,4 @@
-# README
+# RubyonRailsコーディング練習
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Twitter風アプリ『Fwitter』の制作を練習で行いました。
+基本はDMMの教材を参考に、フォロー機能はRailsチュートリアルを参考に作成しました。

@@ -1,11 +1,11 @@
-
 <%= render 'users/header', user:@user %>
 
 <main class="main">
 
-		<h2 class="txtm txtbold mobile_fixed_head">Users</h2>
+		<h2 class="txtm txtbold mobile_fixed_head"><%= @title %></h2>
 		<div class="mobile_head"></div>
-		<% @user.each do |user| %>
+		<% if @users.any? %>
+		<% @users.each do |user| %>
 			<div class="box users">
 				<%= link_to user_path(user.id), class:"user_icon" do %>
 					<div class="user_cont">
@@ -31,6 +31,7 @@
 					</a>
 					<% end %>
 			</div>
+			<% end %>
 		<% end %>
 
 	</main>

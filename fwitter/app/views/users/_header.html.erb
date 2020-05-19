@@ -24,7 +24,7 @@
 				<li class="nav_cont"><a href="" title="" class="txtl txtbold"><%= fa_icon'bookmark', class:"fa-fw"%>Bookmarks</a></li>
 				<li class="nav_cont"><a href="" title="" class="txtl txtbold"><%= fa_icon'list-alt', class:"fa-fw"%>Lists</a></li>
 				<li class="nav_cont">
-					<%= link_to(user_path(current_user), class:"txtl txtbold") do %>
+					<%= link_to(user_path(current_user.id), class:"txtl txtbold") do %>
 					<%= fa_icon'id-card', class:"fa-fw"%>Profile
 					<% end %>
 				</li>
@@ -53,7 +53,7 @@
 				<li class="nav_cont"><a href="" title="" class="txtl txtbold"><%= fa_icon'bookmark', class:"fa-fw"%></a></li>
 				<li class="nav_cont"><a href="" title="" class="txtl txtbold"><%= fa_icon'list-alt', class:"fa-fw"%></a></li>
 				<li class="nav_cont">
-					<%= link_to(user_path(current_user), class:"txtl txtbold") do %>
+					<%= link_to(user_path(current_user.id), class:"txtl txtbold") do %>
 					<%= fa_icon'id-card', class:"fa-fw"%>
 					<% end %>
 				</li>
@@ -63,7 +63,7 @@
 						<div class="btnm btnpink">Fweet</div>
 					<% end %>
 			<div class="users">
-				<%= link_to(user_path(current_user), class:"profile_icon") do %>
+				<%= link_to(user_path(current_user.id), class:"profile_icon") do %>
 						<div class="user_cont">
 							<div class="user_icon">
 								<%= attachment_image_tag current_user, :profile_image, :fill,1000,1000, fallback:"logo.png",  class:"user_img"%>
